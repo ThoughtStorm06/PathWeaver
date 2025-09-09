@@ -5,26 +5,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GraphStruct {
+    private HashMap<String, ArrayList<String>> NodeConnections; // Map of node titles to list of connected node titles
 
-    // Node title → JSON file path
-    private HashMap<String, String> nodes;   
-
-    //Node title → list of next connected node titles
-    private HashMap<String, ArrayList<String>> next_connections;
-
-
-    public HashMap<String, String> getNodes() {
-        return nodes;
+    // Constructors
+    public GraphStruct() {
+        this.NodeConnections = new HashMap<>();
     }
 
-    public void setNodes(HashMap<String, String> nodes) {
-        this.nodes = nodes;
+    // Getters and setters
+    public HashMap<String, ArrayList<String>> getNodeConnections() {
+        return NodeConnections;
     }
 
-    public HashMap<String, ArrayList<String>> getNext_Connections() {
-        return next_connections;
-    }
-    public void setNext_Connections(HashMap<String, ArrayList<String>> next_connections) {
-        this.next_connections = next_connections;
+    public void setNodeConnections(HashMap<String, ArrayList<String>> NodeConnections) {
+        this.NodeConnections = NodeConnections;
     }
 }
