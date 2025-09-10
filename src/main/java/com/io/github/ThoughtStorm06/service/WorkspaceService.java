@@ -1,14 +1,14 @@
-package com.io.github.ThoughtStorm06.Services;
+package com.io.github.ThoughtStorm06.service;
 
 import com.io.github.ThoughtStorm06.model.WorkSpace;
 import com.io.github.ThoughtStorm06.repository.WorkspaceRepo;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Workspaceuser {
+public class WorkspaceService {
     public final WorkspaceRepo workspaceRepo;
 
-    public Workspaceuser(WorkspaceRepo workspaceRepo) {
+    public WorkspaceService(WorkspaceRepo workspaceRepo) {
         this.workspaceRepo = workspaceRepo;
     }
 

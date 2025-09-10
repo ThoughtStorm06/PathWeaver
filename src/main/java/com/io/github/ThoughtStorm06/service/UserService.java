@@ -1,4 +1,4 @@
-package com.io.github.ThoughtStorm06.Services;
+package com.io.github.ThoughtStorm06.service;
 
 import com.io.github.ThoughtStorm06.model.User;
 import com.io.github.ThoughtStorm06.repository.UserRepo;
