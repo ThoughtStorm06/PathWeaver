@@ -34,12 +34,12 @@ public class NodeStructuringRepo extends json_crud {
         graph.setNodeConnections(NodeConnections);
 
         // Save the updated graph structure
-        String graphFilePath = projectDirPath + File.separator + "graph.json";
+        String graphFilePath = projectDirPath + File.separator + "_graph_credentials.json";
         objectMapper.writeValue(new File(graphFilePath), graph);
     }
 
     public GraphStruct readGraph(String username, String project) {
-        String graphFilePath = datafolderpath + File.separator + username + File.separator +"workspace"+ File.separator+ project + File.separator + "graph.json";
+        String graphFilePath = datafolderpath + File.separator + username + File.separator +"workspace"+ File.separator+ project + File.separator + "_graph_credentials.json";
         File graphFile = new File(graphFilePath);
         ObjectMapper objectMapper = new ObjectMapper();
         if (graphFile.exists()) {
@@ -91,7 +91,7 @@ public class NodeStructuringRepo extends json_crud {
 
     public void updateConnections(String username, String project, GraphStruct graph) {
         String projectDirPath = datafolderpath + File.separator + username + File.separator +"workspace"+ File.separator+ project;
-        String graphFilePath = projectDirPath + File.separator + "graph.json";
+        String graphFilePath = projectDirPath + File.separator + "_graph_credentials.json";
         File graphFile = new File(graphFilePath);
         ObjectMapper objectMapper = new ObjectMapper();
         if (graphFile.exists()) {
